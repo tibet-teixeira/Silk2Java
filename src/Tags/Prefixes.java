@@ -12,11 +12,11 @@ public class Prefixes {
 
     public Prefixes (Document doc) {
         NodeList prefixesList = doc.getElementsByTagName("Prefixes");
-        Element eElement = (Element) prefixesList.item(0);
+        Element prefixes = (Element) prefixesList.item(0);
 
         this.listPrefixes = new ArrayList<>();
 
-        NodeList prefixList = eElement.getElementsByTagName("Prefix");
+        NodeList prefixList = prefixes.getElementsByTagName("Prefix");
 
         for (int index = 0; index < prefixList.getLength(); index++) {
             listPrefixes.add(new Prefix((Element) prefixList.item(index)));

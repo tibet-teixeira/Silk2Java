@@ -1,72 +1,71 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Silk xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/LinkSpecificationLanguage.xsd">
-  <Prefixes>
-    <Prefix id="rdf" namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix id="rdfs" namespace="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix id="owl" namespace="http://www.w3.org/2002/07/owl#"/>
-    <Prefix id="osus_o" namespace="http://200.19.182.252/ontology#"/>
-  </Prefixes>
-  <Interlinks>
-    
-
-    <Interlink id="Deterministico">
-      <LinkType>owl:sameAs</LinkType>
-      <SourceDataset dataSource="SOURCE" var="a">
-        <RestrictTo>?a rdf:type osus_o:PessoaMorta .</RestrictTo>
-      </SourceDataset>
-      <TargetDataset dataSource="TARGET" var="b">
-        <RestrictTo>?a rdf:type osus_o:RN .</RestrictTo>
-      </TargetDataset>
-      <LinkageRule>
-        <Compare metric="equality">
-          <Input id="sourcePathA" path="?a/osus_o:numDecNascVivo"/>
-          <Input id="targetPathB" path="?b/osus_o:numDecNascVivo"/>
-        </Compare>
-      </LinkageRule>
-      <Filter/>
-    </Interlink>
-<!--
-    <Interlink id="Probabilistico">
-      <LinkType>owl:sameAs</LinkType>
-      <SourceDataset dataSource="SOURCE" var="a">
-        <RestrictTo>?a rdf:type osus_o:PessoaMorta .</RestrictTo>
-      </SourceDataset>
-      <TargetDataset dataSource="TARGET" var="b">
-        <RestrictTo>?a rdf:type osus_o:Filho .</RestrictTo>
-      </TargetDataset>
-      <LinkageRule>
-       <Aggregate id="average1" required="false" type="average" weight="1">
-              
-              <Compare metric="equality" required="true" threshold="0.0" weight="2">
-                <Input id="sourcePath1" path="?a/osus_o:dataNascimento"/>
-                <Input id="targetPath1" path="?b/osus_o:dataNascimento"/>
-              </Compare>
-              
-              <Compare id="levenshteinDistance1" metric="levenshteinDistance" required="true" threshold="2.0" weight="1">
-                <TransformInput function="removeBlanks" id="removeBlanks2">
-                  <TransformInput function="lowerCase" id="lowerCase1">
-                    <Input id="sourcePath2" path="?a/osus_o:temMae/osus_o:nomeCompleto"/>
-                  </TransformInput>
-                </TransformInput>
-                <TransformInput function="removeBlanks" id="removeBlanks1">
-                  <TransformInput function="lowerCase" id="lowerCase2">
-                    <Input id="targetPath2" path="?b/osus_o:temMae/osus_o:nomeCompleto"/>
-                  </TransformInput>
-                </TransformInput>
-                <Param name="minChar" value="0"/>
-                <Param name="maxChar" value="z"/>
-              </Compare>
-              <Compare id="equality2" metric="equality" required="false" weight="5">
-                <Input id="sourcePath3" path="?a/osus_o:numDecNascVivo"/>
-                <Input id="targetPath3" path="?b/osus_o:numDecNascVivo"/>
-              </Compare>
-            </Aggregate>
-      </LinkageRule>
-      <Filter limit="1"/>
-
-    </Interlink>
--->
+<Silk xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="../../xsd/LinkSpecificationLanguage.xsd">
+    <Prefixes>
+        <Prefix id="rdf" namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        <Prefix id="rdfs" namespace="http://www.w3.org/2000/01/rdf-schema#"/>
+        <Prefix id="owl" namespace="http://www.w3.org/2002/07/owl#"/>
+        <Prefix id="osus_o" namespace="http://200.19.182.252/ontology#"/>
+    </Prefixes>
+    <Interlinks>
 
 
-  </Interlinks>
+        <Interlink id="Deterministico">
+            <LinkType>owl:sameAs</LinkType>
+            <SourceDataset dataSource="SOURCE" var="a">
+                <RestrictTo>?a rdf:type osus_o:PessoaMorta .</RestrictTo>
+            </SourceDataset>
+            <TargetDataset dataSource="TARGET" var="b">
+                <RestrictTo>?a rdf:type osus_o:RN .</RestrictTo>
+            </TargetDataset>
+            <LinkageRule>
+                <Compare metric="equality">
+                    <Input id="sourcePathA" path="?a/osus_o:numDecNascVivo"/>
+                    <Input id="targetPathB" path="?b/osus_o:numDecNascVivo"/>
+                </Compare>
+            </LinkageRule>
+            <Filter/>
+        </Interlink>
+        <!---->
+        <Interlink id="Probabilistico">
+            <LinkType>owl:sameAs</LinkType>
+            <SourceDataset dataSource="SOURCE" var="a">
+                <RestrictTo>?a rdf:type osus_o:PessoaMorta .</RestrictTo>
+            </SourceDataset>
+            <TargetDataset dataSource="TARGET" var="b">
+                <RestrictTo>?a rdf:type osus_o:Filho .</RestrictTo>
+            </TargetDataset>
+            <LinkageRule>
+                <Aggregate id="average1" required="false" type="average" weight="1">
+
+                    <Compare metric="equality" required="true" threshold="0.0" weight="2">
+                        <Input id="sourcePath1" path="?a/osus_o:dataNascimento"/>
+                        <Input id="targetPath1" path="?b/osus_o:dataNascimento"/>
+                    </Compare>
+
+                    <Compare id="levenshteinDistance1" metric="levenshteinDistance" required="true" threshold="2.0"
+                             weight="1">
+                        <TransformInput function="removeBlanks" id="removeBlanks2">
+                            <TransformInput function="lowerCase" id="lowerCase1">
+                                <Input id="sourcePath2" path="?a/osus_o:temMae/osus_o:nomeCompleto"/>
+                            </TransformInput>
+                        </TransformInput>
+                        <TransformInput function="removeBlanks" id="removeBlanks1">
+                            <TransformInput function="lowerCase" id="lowerCase2">
+                                <Input id="targetPath2" path="?b/osus_o:temMae/osus_o:nomeCompleto"/>
+                            </TransformInput>
+                        </TransformInput>
+                        <Param name="minChar" value="0"/>
+                        <Param name="maxChar" value="z"/>
+                    </Compare>
+                    <Compare id="equality2" metric="equality" required="false" weight="5">
+                        <Input id="sourcePath3" path="?a/osus_o:numDecNascVivo"/>
+                        <Input id="targetPath3" path="?b/osus_o:numDecNascVivo"/>
+                    </Compare>
+                </Aggregate>
+            </LinkageRule>
+            <Filter limit="1"/>
+
+        </Interlink>
+    </Interlinks>
 </Silk>

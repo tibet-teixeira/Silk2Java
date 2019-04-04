@@ -5,16 +5,20 @@ import org.w3c.dom.Element;
 public class Interlink {
     private String id;
     private LinkType linkType;
-//    private SourceDataset source;
-//    private TargetDataset target;
+    private DatasetProp sourceDataset;
+    private DatasetProp targetDataset;
 //    private LinkageRule linkageRule;
 
     public Interlink (Element interlink) {
-        this.linkType = new LinkType((Element) interlink.getElementsByTagName("LinkType").item(0));
         this.id = interlink.getAttribute("id");
-//        System.out.println(this.linkType);
-//        this.source = interlink.getAttribute("SourceDataset");
-//        this.target = interlink.getAttribute("TargetDataset");
+        this.linkType = new LinkType((Element) interlink.getElementsByTagName("LinkType")
+                .item(0));
+        this.sourceDataset = new DatasetProp((Element) interlink.getElementsByTagName("SourceDataset")
+                .item(0));
+        this.targetDataset = new DatasetProp((Element) interlink.getElementsByTagName("TargetDataset")
+                .item(0));
+
+
 //        this.linkageRule = interlink.getAttribute("LinkageRule");
 
     }
@@ -24,6 +28,14 @@ public class Interlink {
     }
 
     public String getId () {
-        return id;
+        return this.id;
+    }
+
+    public DatasetProp getSourceDataset () {
+        return this.sourceDataset;
+    }
+
+    public DatasetProp getTargetDataset () {
+        return this.targetDataset;
     }
 }

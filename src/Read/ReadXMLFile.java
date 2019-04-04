@@ -21,7 +21,7 @@ public class ReadXMLFile {
         this.doc = dBuilder.parse(fXmlFile);
     }
 
-    public Document getDocument(){
+    public Document getDocument () {
         return this.doc;
     }
 

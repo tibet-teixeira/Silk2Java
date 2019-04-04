@@ -1,8 +1,5 @@
 import Read.ReadXMLFile;
-import Tags.Interlink;
-import Tags.Interlinks;
-import Tags.Prefix;
-import Tags.Prefixes;
+import Tags.*;
 import org.w3c.dom.Document;
 
 import java.util.ArrayList;
@@ -24,12 +21,17 @@ public class Main {
             ArrayList<Interlink> listInterlinks = interlinks.getInterlinks();
 
             for (Interlink interlink : listInterlinks) {
+                DatasetProp source = interlink.getSourceDataset();
+                DatasetProp target = interlink.getTargetDataset();
                 System.out.println("Id: " + interlink.getId());
                 System.out.println("LinkType: " + interlink.getLinkType());
-            }
-
-            for (Prefix prefix : listPrefixes) {
-                System.out.println("Id: " + prefix.getId());
+                System.out.println("SourceData: " + source.getDataSource() +
+                        " - " + source.getRestrictTo() +
+                        " - " + source.getVar());
+                System.out.println("TargetData: " + target.getDataSource() +
+                        " - " + target.getRestrictTo() +
+                        " - " + target.getVar());
+                System.out.println("\n\n\n");
             }
 
         } catch (Exception e) {
