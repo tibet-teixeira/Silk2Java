@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e43d9401-6086-4ec6-b089-90a16462c49c" name="Default" comment="parsing SourceData and TargetData tags to class Java">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linkSpec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/linkSpec.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/parseLinkSpec/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseLinkSpec/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/parseLinkSpec/Tags/Interlink.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseLinkSpec/Tags/Interlink.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/parseLinkSpec/Tags/Interlinks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseLinkSpec/Tags/Interlinks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/parseLinkSpec/Tags/Prefixes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/parseLinkSpec/Tags/Prefixes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Read/ReadXMLFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Read/ReadXMLFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tags/Interlink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tags/Interlink.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tags/Interlinks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tags/Interlinks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tags/Prefixes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tags/Prefixes.java" afterDir="false" />
-    </list>
+    <list default="true" id="e43d9401-6086-4ec6-b089-90a16462c49c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,8 +41,8 @@
       <file leaf-file-name="linkSpec.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/linkSpec.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="4" column="41" lean-forward="true" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+            <state relative-caret-position="189">
+              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -72,7 +59,7 @@
       <file leaf-file-name="Interlink.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tags/Interlink.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
+            <state relative-caret-position="442">
               <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="e#895#896#0" expanded="true" />
@@ -81,23 +68,6 @@
                 <element signature="e#860#861#0" expanded="true" />
                 <element signature="e#1043#1044#0" expanded="true" />
                 <element signature="e#1079#1080#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatasetProp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tags/DatasetProp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-              <folding>
-                <element signature="e#481#482#0" expanded="true" />
-                <element signature="e#514#515#0" expanded="true" />
-                <element signature="e#545#546#0" expanded="true" />
-                <element signature="e#571#572#0" expanded="true" />
-                <element signature="e#609#610#0" expanded="true" />
-                <element signature="e#642#643#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -168,9 +138,9 @@
         <option value="$PROJECT_DIR$/src/Tags/DatasetProp.java" />
         <option value="$PROJECT_DIR$/src/Tags/Interlink.java" />
         <option value="$PROJECT_DIR$/src/Tags/Interlinks.java" />
-        <option value="$PROJECT_DIR$/linkSpec.xml" />
         <option value="$PROJECT_DIR$/src/Read/ReadXMLFile.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/linkSpec.xml" />
       </list>
     </option>
   </component>
@@ -302,15 +272,22 @@
       <option name="presentableId" value="Default" />
       <updated>1554308054421</updated>
     </task>
+    <task id="LOCAL-00001" summary="parsing SourceData and TargetData tags to class Java">
+      <created>1554347688338</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554347688338</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.32985073" />
+      <window_info anchor="bottom" id="Messages" order="7" visible="true" weight="0.32985073" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -321,7 +298,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17349927" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17349927" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -424,36 +401,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tags/Interlink.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#895#896#0" expanded="true" />
-            <element signature="e#925#926#0" expanded="true" />
-            <element signature="e#831#832#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
-            <element signature="e#1043#1044#0" expanded="true" />
-            <element signature="e#1079#1080#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tags/DatasetProp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-          <folding>
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#514#515#0" expanded="true" />
-            <element signature="e#545#546#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-            <element signature="e#609#610#0" expanded="true" />
-            <element signature="e#642#643#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Tags/LinkType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -482,13 +429,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tags/Interlinks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Read/ReadXMLFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -511,10 +451,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tags/DatasetProp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <folding>
+            <element signature="e#481#482#0" expanded="true" />
+            <element signature="e#514#515#0" expanded="true" />
+            <element signature="e#545#546#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tags/Interlink.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#895#896#0" expanded="true" />
+            <element signature="e#925#926#0" expanded="true" />
+            <element signature="e#831#832#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#1043#1044#0" expanded="true" />
+            <element signature="e#1079#1080#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tags/Interlinks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/linkSpec.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="41" lean-forward="true" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+        <state relative-caret-position="189">
+          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
         </state>
       </provider>
     </entry>
