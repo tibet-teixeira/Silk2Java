@@ -7,7 +7,8 @@ public class Interlink {
     private LinkType linkType;
     private DatasetProp sourceDataset;
     private DatasetProp targetDataset;
-//    private LinkageRule linkageRule;
+    private LinkageRule linkageRule;
+//    private Filter filter;
 
     public Interlink (Element interlink) {
         this.id = interlink.getAttribute("id");
@@ -17,9 +18,8 @@ public class Interlink {
                 .item(0));
         this.targetDataset = new DatasetProp((Element) interlink.getElementsByTagName("TargetDataset")
                 .item(0));
-
-
-//        this.linkageRule = interlink.getAttribute("LinkageRule");
+        this.linkageRule = new LinkageRule((Element) interlink.getElementsByTagName("LinkageRule")
+                .item(0));
 
     }
 
@@ -37,5 +37,9 @@ public class Interlink {
 
     public DatasetProp getTargetDataset () {
         return this.targetDataset;
+    }
+
+    public LinkageRule getLinkageRule () {
+        return linkageRule;
     }
 }

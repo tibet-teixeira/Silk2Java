@@ -11,7 +11,7 @@ public class Main {
     public static void main (String argv[]) {
 
         try {
-            String pathname = "linkSpec2.xml";
+            String pathname = "linkSpec.xml";
 
             Document xml = new ReadXMLFile(pathname).getDocument();
 
@@ -27,29 +27,22 @@ public class Main {
                 }
             }
 
-            for(String tag:tags){
-                System.out.println(tag);
-            }
-
             Prefixes prefixes = new Prefixes(xml);
             Interlinks interlinks = new Interlinks(xml);
 
             ArrayList<Prefix> listPrefixes = prefixes.getPrefixes();
             ArrayList<Interlink> listInterlinks = interlinks.getInterlinks();
+            ArrayList<LinkageRule> listRules = new ArrayList<>();
 
-//            for (Interlink interlink : listInterlinks) {
-//                DatasetProp source = interlink.getSourceDataset();
-//                DatasetProp target = interlink.getTargetDataset();
-//                System.out.println("Id: " + interlink.getId());
-//                System.out.println("LinkType: " + interlink.getLinkType());
-//                System.out.println("SourceData: " + source.getDataSource() +
-//                        " - " + source.getRestrictTo() +
-//                        " - " + source.getVar());
-//                System.out.println("TargetData: " + target.getDataSource() +
-//                        " - " + target.getRestrictTo() +
-//                        " - " + target.getVar());
-//                System.out.println("\n");
-//            }
+            for (Interlink inter : listInterlinks) {
+                listRules.add(inter.getLinkageRule());
+            }
+
+//            System.out.println(listRules.get(0).getAggregateList().get(0).toString());
+            System.out.println(listRules.get(0).getCompareList().get(0).toString());
+            System.out.println(listRules.get(1).getAggregateList().get(0).toString());
+            System.out.println(listRules.get(1).getCompareList().get(0).toString());
+
 
         } catch (Exception e) {
             e.printStackTrace();
