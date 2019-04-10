@@ -1,11 +1,12 @@
 package Tags;
 
+import Visitor.*;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import java.util.ArrayList;
 
-public class Compare {
+public class Compare implements Visitable {
     private String id;
     private String metric;
     private String threshold;
@@ -75,4 +76,10 @@ public class Compare {
         }
         return attributes;
     }
+
+    @Override
+    public void accept (Visitor visitor) {
+        visitor.visit(this);
+    }
+
 }

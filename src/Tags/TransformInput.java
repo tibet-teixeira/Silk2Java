@@ -1,11 +1,12 @@
 package Tags;
 
+import Visitor.*;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import java.util.ArrayList;
 
-public class TransformInput {
+public class TransformInput implements Visitable{
 
     private String id;
     private String function;
@@ -30,5 +31,10 @@ public class TransformInput {
             attributes += "\n" + input.toString();
         }
         return attributes;
+    }
+
+    @Override
+    public void accept (Visitor visitor) {
+        visitor.visit(this);
     }
 }

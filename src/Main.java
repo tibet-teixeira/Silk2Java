@@ -38,10 +38,12 @@ public class Main {
                 listRules.add(inter.getLinkageRule());
             }
 
+            listRules.get(1).showAll();
+
 //            System.out.println(listRules.get(0).getAggregateList().get(0).toString());
-            System.out.println(listRules.get(0).getCompareList().get(0).toString());
-            System.out.println(listRules.get(1).getAggregateList().get(0).toString());
-            System.out.println(listRules.get(1).getCompareList().get(0).toString());
+//            System.out.println(listRules.get(0).getCompareList().get(0).toString());
+//            System.out.println(listRules.get(1).getAggregateList().get(0).toString());
+//            System.out.println(listRules.get(1).getCompareList().get(0).toString());
 
 
         } catch (Exception e) {

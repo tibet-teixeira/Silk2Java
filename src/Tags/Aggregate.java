@@ -1,11 +1,13 @@
 package Tags;
 
+import Visitor.Visitable;
+import Visitor.Visitor;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import java.util.ArrayList;
 
-public class Aggregate {
+public class Aggregate implements Visitable {
     private String id;
     private String type;
     private String required;
@@ -43,6 +45,11 @@ public class Aggregate {
 
     public ArrayList<Compare> getCompareList () {
         return compareList;
+    }
+
+    @Override
+    public void accept (Visitor visitor) {
+        visitor.visit(this);
     }
 
     @Override
