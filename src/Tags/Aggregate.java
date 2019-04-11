@@ -14,7 +14,7 @@ public class Aggregate implements Visitable {
     private String weight;
     private ArrayList<Compare> compareList;
 
-    public Aggregate (Element aggregate) {
+    Aggregate (Element aggregate) {
         this.id = aggregate.getAttribute("id");
         this.type = aggregate.getAttribute("type");
         this.required = aggregate.getAttribute("required");
@@ -45,6 +45,10 @@ public class Aggregate implements Visitable {
 
     public ArrayList<Compare> getCompareList () {
         return compareList;
+    }
+
+    public String show(){
+        return "Aggregate " + this.id;
     }
 
     @Override

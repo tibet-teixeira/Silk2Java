@@ -15,7 +15,7 @@ public class Compare implements Visitable {
     private ArrayList<Input> inputList;
     private ArrayList<TransformInput> transformInputList;
 
-    public Compare (Element compare) {
+    Compare (Element compare) {
         this.id = compare.getAttribute("id");
         this.metric = compare.getAttribute("metric");
         this.threshold = compare.getAttribute("threshold");
@@ -61,6 +61,10 @@ public class Compare implements Visitable {
 
     public ArrayList<TransformInput> getTransformInputList () {
         return transformInputList;
+    }
+
+    public String show(){
+        return "Compare " + this.id;
     }
 
     @Override

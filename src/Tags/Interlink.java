@@ -10,7 +10,7 @@ public class Interlink {
     private LinkageRule linkageRule;
 //    private Filter filter;
 
-    public Interlink (Element interlink) {
+    Interlink (Element interlink) {
         this.id = interlink.getAttribute("id");
         this.linkType = new LinkType((Element) interlink.getElementsByTagName("LinkType")
                 .item(0));

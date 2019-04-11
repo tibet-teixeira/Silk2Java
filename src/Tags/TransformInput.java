@@ -12,7 +12,7 @@ public class TransformInput implements Visitable{
     private String function;
     private ArrayList<Input> inputList;
 
-    public TransformInput (Element transformInput) {
+    TransformInput (Element transformInput) {
         this.id = transformInput.getAttribute("id");
         this.function = transformInput.getAttribute("function");
         this.inputList = new ArrayList<>();
@@ -21,6 +21,10 @@ public class TransformInput implements Visitable{
         for (int index = 0; index < inputs.getLength(); index++) {
             inputList.add(new Input((Element) inputs.item(index)));
         }
+    }
+
+    public String show(){
+        return "TransformInput " + this.id;
     }
 
     @Override

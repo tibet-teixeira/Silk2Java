@@ -9,18 +9,16 @@ import java.util.ArrayList;
 
 public class LinkageRule {
 
-    private ArrayList<Aggregate> aggregateList;
-    private ArrayList<Compare> compareList;
     private ArrayList<Visitable> items;
 
-    public LinkageRule (Element linkageRule) {
-        this.aggregateList = new ArrayList<>();
-        this.compareList = new ArrayList<>();
+    LinkageRule (Element linkageRule) {
+
         this.items = new ArrayList<>();
 
         NodeList aggregates = linkageRule.getElementsByTagName("Aggregate");
         NodeList compares = linkageRule.getElementsByTagName("Compare");
         NodeList transforms = linkageRule.getElementsByTagName("TransformInput");
+        NodeList inputs = linkageRule.getElementsByTagName("Input");
 
         for (int index = 0; index < aggregates.getLength(); index++) {
             items.add(new Aggregate((Element) aggregates.item(index)));
@@ -29,8 +27,13 @@ public class LinkageRule {
         for (int index = 0; index < compares.getLength(); index++) {
             items.add(new Compare((Element) compares.item(index)));
         }
-        for (int index = 0; index < compares.getLength(); index++) {
-            items.add(new Compare((Element) compares.item(index)));
+
+        for (int index = 0; index < transforms.getLength(); index++) {
+            items.add(new TransformInput((Element) transforms.item(index)));
+        }
+
+        for (int index = 0; index < inputs.getLength(); index++) {
+            items.add(new Input((Element) inputs.item(index)));
         }
     }
 
@@ -39,13 +42,5 @@ public class LinkageRule {
         for (Visitable item : items) {
             item.accept(visitor);
         }
-    }
-
-    public ArrayList<Aggregate> getAggregateList () {
-        return aggregateList;
-    }
-
-    public ArrayList<Compare> getCompareList () {
-        return compareList;
     }
 }
