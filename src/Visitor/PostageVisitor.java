@@ -5,7 +5,14 @@ import Tags.Compare;
 import Tags.Input;
 import Tags.TransformInput;
 
+import java.util.ArrayList;
+
 public class PostageVisitor implements Visitor {
+    private ArrayList<Input> inputs;
+
+    public PostageVisitor () {
+        this.inputs = new ArrayList<>();
+    }
 
     public void visit (Aggregate aggregate) {
         System.out.println(aggregate.show());
@@ -20,6 +27,10 @@ public class PostageVisitor implements Visitor {
     }
 
     public void visit (Input input) {
-        System.out.println(input.show());
+        inputs.add(input);
+    }
+
+    public ArrayList<Input> getInputs(){
+        return this.inputs;
     }
 }

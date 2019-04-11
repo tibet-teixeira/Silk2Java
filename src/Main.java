@@ -38,7 +38,11 @@ public class Main {
                 listRules.add(inter.getLinkageRule());
             }
 
-            listRules.get(1).showAll();
+//            listRules.get(1).showAll();
+            ArrayList<Input> inputs = listRules.get(1).getInputs();
+            for (Input input:inputs) {
+                System.out.println(input.getId() + " " + input.getPath());
+            }
 
 //            System.out.println(listRules.get(0).getAggregateList().get(0).toString());
 //            System.out.println(listRules.get(0).getCompareList().get(0).toString());
