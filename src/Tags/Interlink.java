@@ -12,7 +12,7 @@ public class Interlink {
     private DatasetProp targetDataset;
     private LinkageRule linkageRule;
     private HashMap<String, ArrayList<Input>> mapVariableDatasetInputs;
-//    private Filter filter;
+    private Filter filter;
 
     Interlink (Element interlink) {
         this.id = interlink.getAttribute("id");
@@ -25,6 +25,8 @@ public class Interlink {
         this.targetDataset = new DatasetProp((Element) interlink.getElementsByTagName("TargetDataset")
                 .item(0));
         this.linkageRule = new LinkageRule((Element) interlink.getElementsByTagName("LinkageRule")
+                .item(0));
+        this.filter = new Filter((Element) interlink.getElementsByTagName("Filter")
                 .item(0));
 
         mapVariableDatasetInputs.put(this.sourceDataset.getVar(),

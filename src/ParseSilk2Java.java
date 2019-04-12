@@ -32,7 +32,5 @@ public class ParseSilk2Java {
                 System.out.println("\t" + input.getPath());
             }
         }
-
-
     }
 }
