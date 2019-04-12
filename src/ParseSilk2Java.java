@@ -15,16 +15,6 @@ public class ParseSilk2Java {
 
         xml.getDocumentElement().normalize();
 
-//        Element rootNode = (Element) xml.getChildNodes().item(0); // get Root node
-//        ArrayList<String> tags = new ArrayList<>();
-//
-//        NodeList tagsChild = rootNode.getChildNodes();
-//        for (int index = 0; index < tagsChild.getLength(); index++) {
-//            if (! tagsChild.item(index).getNodeName().equals("#text")) {
-//                tags.add(tagsChild.item(index).getNodeName());
-//            }
-//        }
-
         Prefixes prefixes = new Prefixes(xml);
         Interlinks interlinks = new Interlinks(xml);
 
@@ -35,19 +25,14 @@ public class ParseSilk2Java {
         HashMap<Interlink, ArrayList<Input>> mapInterlinkInputList = new HashMap<>();
 
         for (Interlink interlink : listInterlinks) {
-            interlink.getLinkageRule().getInputs();
-            inputs = new ArrayList<>(interlink.getLinkageRule().getInputs());
-            mapInterlinkInputList.put(interlink, inputs);
+            System.out.println("Interlink id: " + interlink.getId());
+            ArrayList<Input> listInputs = interlink.getMapVariableDatasetInputs().get("b");
+
+            for (Input input : listInputs) {
+                System.out.println("\t" + input.getPath());
+            }
         }
 
-        for (Interlink interlink : listInterlinks) {
-            System.out.println("Interlink id " + interlink.getId());
-            System.out.println("Source restrict " + " Var " + interlink.getSourceDataset().getVar() + " " +  interlink.getSourceDataset().getRestrictTo());
-            System.out.println("Target restrict " + " Var " + interlink.getTargetDataset().getVar() + " " + interlink.getTargetDataset().getRestrictTo());
-            for (Input input : mapInterlinkInputList.get(interlink)) {
-                System.out.println("\t" + input.getId() + " " + input.getPath());
-            }
-            System.out.println();
-        }
+
     }
 }

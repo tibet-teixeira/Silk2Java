@@ -8,8 +8,6 @@
         <Prefix id="osus_o" namespace="http://200.19.182.252/ontology#"/>
     </Prefixes>
     <Interlinks>
-
-
         <Interlink id="Deterministico">
             <LinkType>owl:sameAs</LinkType>
             <SourceDataset dataSource="SOURCE" var="a">
