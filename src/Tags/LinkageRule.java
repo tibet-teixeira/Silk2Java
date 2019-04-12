@@ -11,6 +11,9 @@ public class LinkageRule {
 
     private ArrayList<Visitable> items;
     private ArrayList<Visitable> inputList;
+    private ArrayList<Compare> compareList;
+    private ArrayList<Aggregate> aggregateList;
+    private ArrayList<TransformInput> transformInputsList;
 
     LinkageRule (Element linkageRule) {
         this.items = new ArrayList<>();

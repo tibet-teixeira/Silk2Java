@@ -16,7 +16,7 @@
                 <RestrictTo>?a rdf:type osus_o:PessoaMorta .</RestrictTo>
             </SourceDataset>
             <TargetDataset dataSource="TARGET" var="b">
-                <RestrictTo>?a rdf:type osus_o:RN .</RestrictTo>
+                <RestrictTo>?b rdf:type osus_o:RN .</RestrictTo>
             </TargetDataset>
             <LinkageRule>
                 <Compare metric="equality">
@@ -33,7 +33,7 @@
                 <RestrictTo>?a rdf:type osus_o:PessoaMorta .</RestrictTo>
             </SourceDataset>
             <TargetDataset dataSource="TARGET" var="b">
-                <RestrictTo>?a rdf:type osus_o:Filho .</RestrictTo>
+                <RestrictTo>?b rdf:type osus_o:Filho .</RestrictTo>
             </TargetDataset>
             <LinkageRule>
                 <Aggregate id="average1" required="false" type="average" weight="1">
